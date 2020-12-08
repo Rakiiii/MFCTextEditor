@@ -92,10 +92,13 @@ void CMFCTextEditorView::OnRButtonUp(UINT /* nFlags */, CPoint point)
 }
 
 void CMFCTextEditorView::onFontDialog() {
+	//Стандартный диалог с шрифтами 
 	CFontDialog dlg;
 	if (dlg.DoModal() == IDOK) {
 		memcpy(&m_lf, dlg.m_cf.lpLogFont, sizeof(LOGFONT));
+		//Создаем шрифт
 		m_Font.CreateFontIndirect(&m_lf); 
+		//Устанавливаем шрифт
 		this->SetFont(&m_Font);
 	}
 }
