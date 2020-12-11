@@ -111,7 +111,7 @@ int CClassView::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	}
 
 	// Fill in some static tree view data (dummy code, nothing magic here)
-	FillClassView();
+	//FillClassView();
 
 	return 0;
 }

@@ -96,10 +96,17 @@ void CMFCTextEditorView::onFontDialog() {
 	CFontDialog dlg;
 	if (dlg.DoModal() == IDOK) {
 		memcpy(&m_lf, dlg.m_cf.lpLogFont, sizeof(LOGFONT));
+		//Чистим старый шрифт
+		m_Font.DeleteObject();
 		//Создаем шрифт
 		m_Font.CreateFontIndirect(&m_lf); 
-		//Устанавливаем шрифт
-		this->SetFont(&m_Font);
+		try {
+			//Устанавливаем шрифт
+			this->SetFont(&m_Font);
+		}
+		catch (void* error) {
+			
+		}
 	}
 }
 
