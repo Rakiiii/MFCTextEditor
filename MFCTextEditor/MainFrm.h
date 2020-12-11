@@ -40,7 +40,6 @@ protected:  // control bar embedded members
 	CMFCStatusBar     m_wndStatusBar;
 	CMFCToolBarImages m_UserImages;
 	COutputWnd        m_wndOutput;
-	CPropertiesWnd    m_wndProperties;
 
 // Generated message map functions
 protected:
